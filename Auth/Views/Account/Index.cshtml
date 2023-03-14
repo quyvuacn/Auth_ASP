@@ -1,0 +1,25 @@
+﻿@model List<Auth.Models.User>
+
+<h1>User List</h1>
+<div class="alert alert-info" role="alert">
+    @TempData["mess"]
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>PasswordHash</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@user.PasswordHash</td>
+            </tr>
+        }
+    </tbody>
+</table>
